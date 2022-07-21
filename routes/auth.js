@@ -12,7 +12,4 @@ app.use(function (req, res, next) {
 });
 app.post("/signup", [verifySignUp.checkDuplicateGmail], controller.signup);
 app.post("/signin", controller.signin);
-
-app.post("/signupStaff", [verifySignUpStaff.checkDuplicateGmail], controller.signupStaff);
-app.post("/signinStaff", controller.signinStaff);
 module.exports = app
